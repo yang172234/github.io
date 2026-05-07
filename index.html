@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人博客</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .content {
+            background-color: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .relative-img {
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+        }
+        .absolute-img {
+            border: 2px solid #2196F3;
+            border-radius: 8px;
+        }
+        .path-info {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+            font-family: monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的个人博客</h1>
+        <p>欢迎来到我的技术分享空间</p>
+    </header>
+
+    <div class="content">
+        <h2>关于我</h2>
+        <p>大家好！我是一名计算机科学与技术专业的学生，热爱编程和技术分享。这个博客将记录我的学习心得和项目实践。</p>
+
+        <h2>图片路径演示</h2>
+
+        <!-- 相对路径图片（引用本地images文件夹中的图片） -->
+        <div class="image-section">
+            <h3>📷 相对路径图片</h3>
+            <img class="relative-img" src="images/local.jpg" alt="本地图片" width="300">
+            <div class="path-info">
+                <strong>引用方式：</strong>相对路径 "images/local.jpg"<br>
+                <strong>说明：</strong>图片从本地 images 文件夹加载
+            </div>
+        </div>
+
+        <!-- 绝对路径图片（引用网络图片） -->
+        <div class="image-section">
+            <h3>绝对路径图片</h3>
+            <img class="absolute-img" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="200">
+            <div class="path-info">
+                <strong>引用方式：</strong>绝对路径 "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"<br>
+                <strong>说明：</strong>图片从GitHub官网服务器加载
+            </div>
+        </div>
+
+        <h2>相对路径 vs 绝对路径</h2>
+        <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse;">
+            <tr>
+                <th>类型</th>
+                <th>示例</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td><strong>相对路径</strong></td>
+                <td>images/local.jpg</td>
+                <td>相对于当前HTML文件的位置，只能在当前网站内使用</td>
+            </tr>
+            <tr>
+                <td><strong>绝对路径</strong></td>
+                <td>https://xxx.com/1.png</td>
+                <td>完整的URL地址，可以从任何网站访问</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 我的个人博客 | 基于GitHub Pages搭建</p>
+    </footer>
+</body>
+</html>
